@@ -1,5 +1,6 @@
 import { Button } from "./ui/button";
 import { Activity } from "lucide-react";
+import Link from "next/link";
 
 export function Header() {
   return (
@@ -9,7 +10,7 @@ export function Header() {
           <Activity className="h-6 w-6 text-emerald-600" />
           <span className="text-xl text-emerald-600">Healithm</span>
         </div>
-        
+
         <nav className="hidden md:flex items-center gap-6">
           <a href="#features" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
             Features
@@ -26,12 +27,16 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-3">
-          <Button variant="ghost" size="sm">
-            Log In
-          </Button>
-          <Button size="sm" className="bg-emerald-600 hover:bg-emerald-700">
-            Get Started
-          </Button>
+          <Link href="/components/login">
+            <Button variant="ghost" size="sm">
+              Log In
+            </Button>
+          </Link>
+          <Link href="/signup">
+            <Button size="sm" className="bg-emerald-600 hover:bg-emerald-700">
+              Get Started
+            </Button>
+          </Link>
         </div>
       </div>
     </header>

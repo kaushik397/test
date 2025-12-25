@@ -1,5 +1,6 @@
 import { Button } from "./ui/button";
 import { ArrowRight, Check } from "lucide-react";
+import Link from "next/link";
 
 const benefits = [
   "AI-powered personalized recommendations",
@@ -20,15 +21,19 @@ export function CTASection() {
           <p className="text-xl text-emerald-100 mb-8">
             Join thousands of users who have already started their journey to a healthier life
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Button size="lg" className="bg-white text-emerald-600 hover:bg-gray-100">
-              Start Free Trial
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-emerald-800">
-              Watch Demo
-            </Button>
+            <Link href="/signup">
+              <Button size="lg" className="bg-white text-emerald-600 hover:bg-gray-100">
+                Start Free Trial
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </Link>
+            <a href="#features">
+              <Button size="lg" variant="outline" className="border-white text-white hover:bg-emerald-800">
+                Watch Demo
+              </Button>
+            </a>
           </div>
 
           <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3 text-left max-w-3xl mx-auto">

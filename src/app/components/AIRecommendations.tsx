@@ -114,7 +114,7 @@ export function AIRecommendations() {
                     <div className="flex items-start justify-between">
                       <div className="flex-1">
                         <CardTitle className="text-lg">{workout.name}</CardTitle>
-                        <CardDescription className="mt-2">
+                        <div className="mt-2 text-muted-foreground">
                           <div className="flex items-center gap-3 mb-2">
                             <Clock className="h-4 w-4" />
                             <span>{workout.duration}</span>
@@ -125,7 +125,7 @@ export function AIRecommendations() {
                             <Badge variant="outline">{workout.difficulty}</Badge>
                             <Badge variant="outline">{workout.exercises} exercises</Badge>
                           </div>
-                        </CardDescription>
+                        </div>
                       </div>
                     </div>
                   </CardHeader>

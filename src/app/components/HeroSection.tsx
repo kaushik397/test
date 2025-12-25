@@ -1,6 +1,7 @@
 import { Button } from "./ui/button";
 import { ArrowRight, Sparkles } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
+import Link from "next/link";
 
 export function HeroSection() {
   return (
@@ -12,24 +13,28 @@ export function HeroSection() {
               <Sparkles className="h-4 w-4" />
               <span className="text-sm">AI-Powered Health Platform</span>
             </div>
-            
+
             <h1 className="text-4xl md:text-5xl lg:text-6xl text-gray-900">
               Your Personal Health Journey Starts Here
             </h1>
-            
+
             <p className="text-lg text-gray-600">
-              Healithm uses advanced AI to monitor, manage, and improve your overall well-being. 
+              Healithm uses advanced AI to monitor, manage, and improve your overall well-being.
               Get personalized insights, nutrition tracking, workout plans, and achieve your health goals faster.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="bg-emerald-600 hover:bg-emerald-700">
-                Start Your Journey
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-              <Button size="lg" variant="outline">
-                Learn More
-              </Button>
+              <Link href="/signup">
+                <Button size="lg" className="bg-emerald-600 hover:bg-emerald-700">
+                  Start Your Journey
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </Link>
+              <a href="#features">
+                <Button size="lg" variant="outline">
+                  Learn More
+                </Button>
+              </a>
             </div>
 
             <div className="flex items-center gap-8 pt-4">
@@ -56,7 +61,7 @@ export function HeroSection() {
                 className="w-full h-[500px] object-cover"
               />
             </div>
-            
+
             <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-lg">
               <div className="flex items-center gap-3">
                 <div className="h-12 w-12 rounded-full bg-emerald-100 flex items-center justify-center">

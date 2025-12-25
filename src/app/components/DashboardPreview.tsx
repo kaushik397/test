@@ -1,3 +1,5 @@
+"use client";
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
 import { Progress } from "./ui/progress";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
@@ -186,7 +188,7 @@ export function DashboardPreview() {
                       <Tooltip />
                     </PieChart>
                   </ResponsiveContainer>
-                  
+
                   <div className="space-y-4">
                     {macroData.map((macro, index) => (
                       <div key={index} className="flex items-center gap-3">
