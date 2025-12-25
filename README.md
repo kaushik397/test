@@ -34,3 +34,26 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Supabase Email/Password Auth (Local setup)
+
+1. Create a Supabase project at https://app.supabase.com and copy the project URL and anon key.
+2. Copy `.env.local.example` to `.env.local` and fill in `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_ANON_KEY`.
+
+```bash
+cp .env.local.example .env.local
+# then edit .env.local and paste your values
+```
+
+3. Install dependencies and run the dev server:
+
+```bash
+npm install
+npm run dev
+```
+
+4. Visit `/signup` to create an account and `/login` to sign in.
+
+Notes:
+- This project uses the client-side Supabase JS SDK for authentication.
+- Do not commit `.env.local` to source control. Use environment variables in your deployment platform.
